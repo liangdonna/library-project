@@ -11,13 +11,14 @@ function getTotalAccountsCount(accounts) {
 function getBooksBorrowedCount(books) {
   // YOUR SOLUTION HERE
   return books.filter((books) => {
-    const recent = book.borrows[0];
+    const recent = books.borrows[0];
     return recent.returned === false;
   }).length;
 
   // Hint: You can use the [`filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method here. 
   // If you get stuck, feel free to take a look at this repl.it: https://replit.com/@thinkful/getBooksBorrowedCount#index.js
 }
+
 
 // Tbis is a helper function that's called by other functions inside this file. You don't have to edit it.
 function _sortObjectByValues(obj) {
